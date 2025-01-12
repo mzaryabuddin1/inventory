@@ -20,7 +20,7 @@ app.use('/public', express.static(uploads));
 app.get("/", (req, res) => { res.status(200).json({ msg: "Live!" }) })
 
 app.use('/api/admin', require('./routes/adminRoutes'))
-// app.use('/api/user', require('./routes/userRoutes'))
+app.use('/api/user', require('./routes/userRoutes'))
 
 const server = http.createServer(app);
 
